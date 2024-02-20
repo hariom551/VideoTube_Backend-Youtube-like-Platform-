@@ -1,13 +1,23 @@
 // import mongoose from "mongoose";
 // require('dotenv').config();
 // import {DB_NAME} from "./constants.js"
-import express from "express"
-const app= express();
+
+
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
+import express from "express"
 dotenv.config();
+const app= express();
 
-connectDB();
+connectDB()
+.then(()=>{
+    app.listen(process.env.PORT || 8000, ()=>{
+        console.log(`server is running at port : ${process.env.PORT}`);
+    })
+})
+.catch((error)=>{
+    console.log("MOngo db connection failed !!! ", error);
+})
 
 
 
