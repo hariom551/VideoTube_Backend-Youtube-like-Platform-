@@ -11,7 +11,7 @@ app.use(cors({
 
 app.use(express.json({limit:"16kb"}));
 app.use(express.urlencoded({extended:true, limit:"16kb"}))   // in url encoded like special character hariom%20nathani this type, extended are use for nested but most of case not required
-app.use(express.static("public"))   //  public is a folder for pdf, image 
+app.use(express.static("public"))   //  public is a folder for pdf, image upload
 app.use(cookieParser())    // server se user ka browser k andr ka cookie access kr pau ar uski cookie set bhi kr paye
 
 

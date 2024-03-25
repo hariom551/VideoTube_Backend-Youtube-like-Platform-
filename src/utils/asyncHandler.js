@@ -6,15 +6,9 @@ const asyncHandler = (requestHandlerFn) => {
         .catch((err) => next(err))
     }
 }
-
-
 export {asyncHandler}
 
-
-
-
-
-// asyncHandler is a HOF 
+// asyncHandler is a Higher Order fun 
 
 // const asyncHandler = () => {}
 // const asyncHandler = (func) => { () => {}}
